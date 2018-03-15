@@ -6,22 +6,24 @@
 This is from the compiler's help output:
 
 Available Error Groups: accessControls, ambiguousFunctionDecl,
-    checkRegExp, checkTypes, checkVars, conformanceViolations, const,
-    constantProperty, deprecated, deprecatedAnnotations, duplicateMessage, es3,
-    es5Strict, externsValidation, fileoverviewTags, functionParams, globalThis,
-    internetExplorerChecks, invalidCasts, misplacedTypeAnnotation,
-    missingGetCssName, missingOverride, missingPolyfill, missingProperties,
-    missingProvide, missingRequire, missingReturn, moduleLoad, msgDescriptions,
-    newCheckTypes, nonStandardJsDocs, missingSourcesWarnings,
-    reportUnknownTypes, suspiciousCode, strictModuleDepCheck, typeInvalidation,
-    undefinedNames, undefinedVars, unknownDefines, unusedLocalVariables,
-    unusedPrivateMembers, uselessCode, useOfGoogBase, underscore, visibility
+    checkEventfulObjectDisposal, checkRegExp, checkTypes, checkVars,
+    conformanceViolations, const, constantProperty, deprecated,
+    deprecatedAnnotations, duplicateMessage, es3, es5Strict, externsValidation,
+    fileoverviewTags, globalThis, internetExplorerChecks, invalidCasts,
+    misplacedTypeAnnotation, missingGetCssName, missingProperties,
+    missingProvide, missingRequire, missingReturn, msgDescriptions,
+    newCheckTypes, nonStandardJsDocs, reportUnknownTypes, suspiciousCode,
+    strictModuleDepCheck, typeInvalidation, undefinedNames, undefinedVars,
+    unknownDefines, unusedLocalVariables, unusedPrivateMembers, uselessCode,
+    useOfGoogBase, underscore, visibility
 
 The docs for jscomp_* state that you can use a wildcard. However, that wildcard
 also enables a lot more undocumented items.
 
 You may just want to check out the list here:
 https://github.com/google/closure-compiler/blob/master/src/com/google/javascript/jscomp/DiagnosticGroups.java
+or
+https://github.com/google/closure-compiler/wiki/Warnings
 */
 module.exports = {
   dependency_mode: 'STRICT',
@@ -55,6 +57,7 @@ module.exports = {
     // 'es3',
     'es5Strict',
     'externsValidation',
+    'extraRequires',
     'fileoverviewTags',
     'functionParams',
     'globalThis',
